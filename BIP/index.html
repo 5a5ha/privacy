@@ -47,7 +47,7 @@
   <ul>
     <li>פתיחת האפליקציה</li>
     <li>בחירת סוג עבודה (נשמר שם סוג העבודה, לדוגמה &rlm;"חדר אמבטיה")</li>
-    <li>שמירת מידות חדר</li>
+    <li>שמירת מידות חדר — נרשמת עצם הפעולה בלבד. המידות עצמן (אורך, רוחב, גובה) נשמרות במכשיר ואינן נשלחות לשרת</li>
     <li>הוספת שורה לכתב הכמויות (נשמר אם השורה חושבה אוטומטית)</li>
     <li>ייצוא מוצלח (נשמר הפורמט, מספר השורות, והאם הקובץ שותף או נשמר במכשיר)</li>
   </ul>
@@ -58,6 +58,7 @@
 
   <h2>היכן המידע נשמר</h2>
   <p>נתוני השימוש נשמרים במסד נתונים המתארח בשירות Supabase. ההעברה מתבצעת בהצפנה (HTTPS).</p>
+  <p>האפליקציה פונה לשרת גם כדי לטעון את מאגר התקנים והתקנות. בכל פנייה כזו, כמו בכל פנייה לאינטרנט, כתובת ה-IP של המכשיר נחשפת לשרת. כתובת ה-IP אינה נשמרת על ידינו ואינה חלק מנתוני השימוש הנאספים, אך היא עשויה להופיע ביומני השרת של Supabase כחלק מתפעול שגרתי.</p>
 
   <h2>שיתוף עם צדדים שלישיים</h2>
   <p>נתוני השימוש אינם נמכרים ואינם משותפים עם צדדים שלישיים.</p>
@@ -92,7 +93,7 @@
   <ul>
     <li>App opened</li>
     <li>Work type selected (the work type name is recorded, e.g. "bathroom")</li>
-    <li>Room dimensions saved</li>
+    <li>Room dimensions saved — only the fact that this happened is recorded. The dimensions themselves (length, width, height) stay on the device and are not sent to any server</li>
     <li>Line added to the bill of quantities (records whether it was auto-calculated)</li>
     <li>Successful export (records the format, the number of lines, and whether the file was shared or saved to the device)</li>
   </ul>
@@ -103,6 +104,7 @@
 
   <h2>Where data is stored</h2>
   <p>Usage data is stored in a database hosted on Supabase. Transmission is encrypted (HTTPS).</p>
+  <p>The app also contacts the server to load the standards and regulations database. Every such request, like any internet request, exposes the device's IP address to the server. We do not store the IP address and it is not part of the usage data collected, but it may appear in Supabase server logs as part of routine operation.</p>
 
   <h2>Third-party sharing</h2>
   <p>Usage data is not sold and is not shared with third parties.</p>
